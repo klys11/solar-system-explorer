@@ -18,9 +18,9 @@ An interactive, educational React website exploring all 8 planets of our Solar S
 
 ## Screenshots
 
-![Hero section](./screenshots/hero.png)
-![Mercury](./screenshots/mercury.png)
-![Mercury](./screenshots/jupiter.png)
+![Hero section](screenshots/hero.png)
+![Mercury](screenshots/mercury.png)
+![Jupiter](screenshots/jupiter.png)
 
 ## 🚀 Getting Started
 
