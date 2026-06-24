@@ -1,6 +1,6 @@
 # 🌌 Solar System Explorer — React
 
-An interactive, educational React website exploring all 8 planets of our Solar System. Built with **React 18 + Vite**, zero UI libraries — everything from scratch.
+🌐 **Live Demo:** https://klys11.github.io/solar-system-explorer/
 
 ![React](https://img.shields.io/badge/React-18-61dafb?style=flat-square&logo=react)
 ![Vite](https://img.shields.io/badge/Vite-5-646cff?style=flat-square&logo=vite)
