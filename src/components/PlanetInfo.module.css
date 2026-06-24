@@ -1,0 +1,140 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.number {
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  color: var(--muted);
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #9fa8da;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #c5cae9;
+  font-weight: 300;
+}
+
+.compositionLabel {
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.compositionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.compItem {
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: rgba(121, 134, 203, 0.06);
+  border: 1px solid rgba(121, 134, 203, 0.12);
+  transition: background 0.2s;
+}
+
+.compItem:hover {
+  background: rgba(121, 134, 203, 0.12);
+}
+
+.compLabel {
+  font-size: 0.68rem;
+  font-family: var(--font-display);
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.compValue {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--star-white);
+}
+
+.compBarWrap {
+  margin-top: 6px;
+  height: 3px;
+  background: rgba(121, 134, 203, 0.12);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.compBar {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 1s ease;
+}
+
+.statsRow {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statVal {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.statLabel {
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.funFact {
+  border-left: 3px solid;
+  padding: 12px 16px;
+  background: rgba(121, 134, 203, 0.04);
+  border-radius: 0 8px 8px 0;
+  font-size: 0.88rem;
+  color: #9fa8da;
+  line-height: 1.65;
+}
+
+.funFact strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 6px;
+}
+
+@media (max-width: 900px) {
+  .statsRow {
+    justify-content: center;
+  }
+  .funFact {
+    text-align: left;
+  }
+}
