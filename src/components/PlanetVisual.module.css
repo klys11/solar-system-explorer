@@ -1,0 +1,119 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.orbitRing {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  animation: spinOrbit 20s linear infinite;
+}
+
+.orbitRingInner {
+  animation-duration: 13s;
+  animation-direction: reverse;
+  border-color: rgba(255, 255, 255, 0.04);
+}
+
+@keyframes spinOrbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.planet {
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+  animation: float 6s ease-in-out infinite;
+}
+
+.planet::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at 28% 28%,
+    rgba(255, 255, 255, 0.22),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(2deg);
+  }
+}
+
+.saturnWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.saturnRing {
+  position: absolute;
+  width: 320px;
+  height: 80px;
+  border-radius: 50%;
+  border: 22px solid rgba(232, 208, 144, 0.35);
+  box-shadow:
+    0 0 0 12px rgba(210, 180, 110, 0.2),
+    0 0 0 26px rgba(190, 160, 90, 0.12);
+  transform: rotateX(72deg);
+  z-index: 0;
+}
+
+.saturnWrap .planet {
+  z-index: 1;
+}
+
+.jupiterGRS {
+  position: absolute;
+  left: 15%;
+  top: 58%;
+  width: 45%;
+  height: 28%;
+  background: radial-gradient(
+    ellipse,
+    rgba(180, 60, 30, 0.7) 0%,
+    rgba(140, 40, 20, 0.5) 50%,
+    transparent 80%
+  );
+  border-radius: 50%;
+}
+
+.earthContinent {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      ellipse at 60% 55%,
+      rgba(76, 175, 80, 0.55) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 30% 40%,
+      rgba(76, 175, 80, 0.4) 0%,
+      transparent 35%
+    ),
+    radial-gradient(
+      ellipse at 70% 25%,
+      rgba(255, 255, 255, 0.25) 0%,
+      transparent 30%
+    );
+}
