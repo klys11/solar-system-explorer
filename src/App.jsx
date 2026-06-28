@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import PlanetSection from "./components/PlanetSection";
 import Loader from "./components/Loader";
 import BackToTop from "./components/BackToTop";
+import Orrery from "./components/Orrery";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
       <Navbar planets={planets} />
       <main>
         <Hero />
+        <Orrery />
         {planets.map((planet, index) => (
           <PlanetSection key={planet.id} planet={planet} index={index} />
         ))}
