@@ -1,0 +1,32 @@
+.btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 200;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(121, 134, 203, 0.3);
+  background: rgba(10, 15, 46, 0.85);
+  backdrop-filter: blur(10px);
+  color: var(--star-white);
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  pointer-events: none;
+}
+
+.btn:hover {
+  background: rgba(121, 134, 203, 0.2);
+  border-color: rgba(121, 134, 203, 0.6);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}

@@ -3,11 +3,14 @@ import Starfield from "./components/Starfield";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import PlanetSection from "./components/PlanetSection";
+import Loader from "./components/Loader";
+import BackToTop from "./components/BackToTop";
 import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <>
+      <Loader />
       <Starfield />
       <Navbar planets={planets} />
       <main>
@@ -17,6 +20,7 @@ export default function App() {
         ))}
       </main>
       <Footer />
+      <BackToTop />
     </>
   );
 }
