@@ -1,0 +1,21 @@
+import { useState, useEffect } from "react";
+import styles from "./ScrollProgress.module.css";
+
+export default function ScrollProgress() {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (scrollTop / docHeight) * 100;
+      setProgress(scrolled);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return <div className={styles.bar} style={{ width: `${progress}%` }} />;
+}

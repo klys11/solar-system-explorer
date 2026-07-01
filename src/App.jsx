@@ -7,10 +7,12 @@ import Loader from "./components/Loader";
 import BackToTop from "./components/BackToTop";
 import Orrery from "./components/Orrery";
 import Footer from "./components/Footer";
+import ScrollProgress from "./components/ScrollProgress";
 
 export default function App() {
   return (
     <>
+      <ScrollProgress />
       <Loader />
       <Starfield />
       <Navbar planets={planets} />
